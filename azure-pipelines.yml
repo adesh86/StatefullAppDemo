@@ -34,3 +34,11 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+    - task: Kubernetes@1
+      inputs:
+        connectionType: 'Kubernetes Service Connection'
+        kubernetesServiceEndpoint: 'spnazdok8s'
+        namespace: 'ns-statefull'
+        command: 'create'
+        secretType: 'dockerRegistry'
+        containerRegistryType: 'Azure Container Registry'
