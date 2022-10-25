@@ -35,6 +35,7 @@ stages:
         tags: |
           $(tag)
     - task: Kubernetes@1
+      displayName: Application Deployment to kubernetes
       inputs:
         connectionType: 'Kubernetes Service Connection'
         kubernetesServiceEndpoint: 'spnazdok8s'
