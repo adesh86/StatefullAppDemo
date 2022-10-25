@@ -17,11 +17,11 @@ variables:
   vmImageName: 'ubuntu-latest'
 
 stages:
-- stage: Build
-  displayName: Build and push stage
+- stage: Build-Deployment
+  displayName: Build and Deployment
   jobs:
   - job: Build
-    displayName: Build
+    displayName: Build and Deployment
     pool:
       vmImage: $(vmImageName)
     steps:
