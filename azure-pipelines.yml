@@ -38,9 +38,9 @@ stages:
       inputs:
         connectionType: 'Kubernetes Service Connection'
         kubernetesServiceEndpoint: 'spnazdok8s'
-        command: 'create'
+        namespace: 'default'
+        command: 'apply'
         useConfigurationFile: true
-        configurationType: 'inline'
-        inline: 'namespace statefull'
+        configuration: '$(Build.SourcesDirectory)/kube'
         secretType: 'dockerRegistry'
         containerRegistryType: 'Azure Container Registry'
