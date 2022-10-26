@@ -7,7 +7,7 @@ trigger:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'c085d9d7-5bf3-4415-94f4-7bee7e274fb9'
+  dockerRegistryServiceConnection: 'scacrconnection'
   imageRepository: 'imagestatefullappdemo'
   containerRegistry: 'containerregistryimage.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
